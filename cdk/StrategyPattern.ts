@@ -8,12 +8,12 @@ import {
 	Runtime,
 } from "aws-cdk-lib/aws-lambda";
 
-export const BunLambda = class extends Stack {
+export const StrategyPattern = class extends Stack {
 	constructor(scope: App, id: string, props?: StackProps) {
 		super(scope, id, props);
 
-		new LambdaRestApi(this, "BunLambdaApi", {
-			handler: new Handler(this, "BunLambdaFn", {
+		new LambdaRestApi(this, "StrategyPatternApi", {
+			handler: new Handler(this, "StrategyPatternFn", {
 				architecture: Architecture.ARM_64,
 				code: Code.fromCustomCommand("dist", [
 					"bun",
@@ -23,7 +23,7 @@ export const BunLambda = class extends Stack {
 					"--target=bun",
 					"./index.ts",
 				]),
-				functionName: "bun-lambda",
+				functionName: "strategy-pattern",
 				handler: "index.fetch",
 				layers: [
 					LayerVersion.fromLayerVersionArn(
@@ -34,7 +34,7 @@ export const BunLambda = class extends Stack {
 				],
 				runtime: Runtime.PROVIDED_AL2,
 			}),
-			restApiName: "bun-lambda-api",
+			restApiName: "strategy-pattern-api",
 		});
 	}
 };

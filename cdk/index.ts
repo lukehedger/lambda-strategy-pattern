@@ -1,4 +1,4 @@
 import { App } from "aws-cdk-lib";
-import { BunLambda } from "./BunLambda";
+import { StrategyPattern } from "./StrategyPattern";
 
-new BunLambda(new App(), "BunLambda");
+new StrategyPattern(new App(), "StrategyPattern");

@@ -1,5 +1,5 @@
 {
-	"name": "bun-lambda",
+	"name": "strategy-pattern",
 	"module": "index.ts",
 	"type": "module",
 	"private": true,

@@ -1,6 +1,6 @@
-# bun-lambda
+# strategy-pattern
 
-Template for Lambda functions with Bun and CDK
+Implementation of the Strategy Pattern on AWS Lambda
 
 ## Prerequisites
 
@@ -15,7 +15,9 @@ Or, to enable hot reloading run `bun --hot index.ts`
 
 ### Test
 
-To test the function locally, run `curl -X POST -H "Content-Type: application/json" -d '{"test": true}' http://localhost:3000`
+To test the function locally, run `curl -X POST -H "Content-Type: application/json" -d '{"type": "scheme"}' http://localhost:3000`
+
+To execute automated tests, run `bun test`
 
 ## Deploy
 
@@ -27,8 +29,8 @@ To enable hot reloading for the deployed function and infrastructure, run `bunx 
 
 This will also print live logs from the function to stdout.
 
-NOTE: You can view live logs from the function (without running CDK watch mode) by running `aws logs tail /aws/lambda/bun-lambda --follow`
+NOTE: You can view live logs from the function (without running CDK watch mode) by running `aws logs tail /aws/lambda/strategy-pattern --follow`
 
 ### Test
 
-To test the deployed function, run `curl -X POST -H "Content-Type: application/json" -d '{"test": true}' <API_GATEWAY_URL>`
+To test the deployed function, run `curl -X POST -H "Content-Type: application/json" -d '{"type": "scheme"}' <API_GATEWAY_URL>`
