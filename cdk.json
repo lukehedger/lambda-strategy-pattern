@@ -1,0 +1,6 @@
+{
+	"app": "bun cdk/index",
+	"watch": {
+		"include": ["cdk/*", "index.ts"]
+	}
+}

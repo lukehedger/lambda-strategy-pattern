@@ -1,0 +1,15 @@
+{
+	"name": "bun-lambda",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "2.2.4",
+		"@types/bun": "latest",
+		"aws-cdk": "2.1029.3",
+		"aws-cdk-lib": "2.216.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
